@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<ul>
+ <li>Test Name: <b>  Test 5</b></li>
+ <div class="box-footer ">
+     <div class="pull-right">
+         <a href="cover.html" id="startTest" data-section-id="1" data-test-id="23" data-test-status="PENDING" class="btn btn-primary btn-sm testwindow ">
+             Start Test
+         </a>
+     </div>
+ </div>
+
+</ul>
+<script>
+        $(function () {
+            $('.testwindow').on('click', function () {
+                var sectionId = $(this).data("section-id");
+                var testId = $(this).data("test-id");
+                var testStatus = $(this).data("test-status");
+                $(this).attr('disabled', true);
+                var str;
+                if (testStatus == "INCOMPLETE") {
+                    str = "/test/resume?testId=" + testId;
+                } else {
+                    str = "/test/instructions?sectionId=" + sectionId + "&testId=" + testId;
+                }
+                var url = window.appContext + str;
+                window.location = url
+                var params = [
+                    'height=' + screen.height,
+                    'width=' + screen.width,
+                    'scrollbars=yes',
+                    'fullscreen=yes' // only works in IE, but here for completeness
+                ].join(',');
+    
+                var popup = window.open(url, 'pw-'+testId, params);
+                popup.moveTo(0, 0);
+                window.location.href = appContext + "/dashboard"
+            });
+        })
+    </script>
+</body>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html ng-app="routerApp">
+
+<head>
+    <title>GT SOFTPREP PVT LTD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+   
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <!--script src="login/login.controller.js.js"></script-->
+    <script src="section1/contrl.js"></script>
+    <script src="practicetest/practicecntrl.js"></script>
+    <script src="js/popcntrl.js"></script>
+    <script src="js/timercntrl.js"></script>
+    <script src="section2/contrl1.js"></script>
+    <!-- login -->
+    <script type="text/javascript" src="login/login-service.js"></script>
+    <script type="text/javascript" src="login/login.controller.js"></script>
+  
+    <script src="section1/contrl.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="login/login.css">
+   <link rel="stylesheet" href="js/ll.css">
+   <!-- calc -->
+   <link rel="stylesheet" href="css/theme/plugins/calculator/Site.css">
+<link rel="stylesheet" href="css/theme/plugins/calculator/jquery-ui-1.8.22.custom.css">
+<link rel="stylesheet" href="css/theme/plugins/calculator/calcyPageLevelCSS.css">
+
+
+    <!-- CSS (load bootstrap) -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="css/assets/favicon-32x32-56ea3c5849ab2de6eaf71db3aae599d9.png">
+    <link rel="apple-touch-icon" href="css/assets/apple-touch-icon-c915103363017d14cea9c2a46ea12166.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="css/assets/apple-touch-icon-retina-21d524e96ee946f16c9b8fb4ea0c3f6e.png">
+    <script src="css/plugins/jquery-1.11.1/js/jquery/jquery-1.11.1.min.js" type="text/javascript" library="jquery"></script>
+
+    <link rel="stylesheet" href="css/assets/application-8673474197bb59309549945ad74abc9a.css" />
+    <script src="css/assets/application-098c5d6fd5d12319584bd1e8c8aba26d.js" type="text/javascript"></script>
+    <script src="css/assets/validation-e546f7d5265cb093c1cf26c392068c71.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/theme/js/datepicker/datepicker.css" type="text/css" />
+    <script src="angular-cookies.js" type="text/javascript" library="jquery"></script>
+
+    <!-- <script src="https://raw.githubusercontent.com/siddii/angular-timer/master/dist/angular-timer.min.js" type="text/javascript" library="jquery"></script> -->
+
+    <script type="text/javascript" src="css/theme/js/jquery-ui.min.js"></script>
+
+
+    <!-- For loading image css -->
+    <link rel="stylesheet" href="css/assets/themeCss/loadingPgae-724bbf06d4cd0b0a9e14f9ff706fa33d.css" />
+    <!-- For Toastr notifications-->
+    <link rel="stylesheet" href="css/assets/themeCss/toastr-010ace84ea81821cb3beaa4ec8680136.css" />
+    <script src="css/assets/toastr-c6ba12f15852aa728859bd8ae59d381e.js" type="text/javascript"></script>
+
+    
+    <link href="css/theme/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="css/theme/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/theme/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" href="css/theme/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/theme/css/icon.css" type="text/css" />
+    <link rel="stylesheet" href="css/theme/css/font.css" type="text/css" />
+    <!-- lession-->
+    <script src="css/theme/js/select2-3.4.8/select2.js"></script>
+    <link rel="stylesheet" href="css/theme/js/select2-3.4.8/select2.css" type="text/css" />
+    <link href="css/theme/bootstrap/css/lessons_tree.css" rel="stylesheet" type="text/css" />
+    <script src="css/theme/bootstrap/js/lessons_tree.js"></script>
+    <script src="css/theme/bootstrap/js/lessons_filter.js"></script>
+    <link href="css/theme/css/lessons.css" rel="stylesheet" type="text/css" />
+
+    <script src="css/theme/js/jquery.bonsai.js" type="text/javascript"></script>
+
+
+
+    <!-- AdminLTE App -->
+    <script type="text/javascript" src="css/theme/js/jquery-ui.min.js"></script>
+    <script src="css/theme/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="css/theme/js/app.min.js" type="text/javascript"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="css/theme/plugins/fastclick/fastclick.min.js"></script>
+
+    <!-- Steps Wizard Plugin -->
+    <script type="text/javascript" src="css/theme/js/steps/jquery.steps.min.js"></script>
+
+
+
+
+    <!-- Text highlighter -->
+    <script type="text/javascript" src="css/theme/js/highlighter/jquery.textHighlighter.min.js"></script>
+ 
+
+
+    <script type="text/javascript" src="css/theme/js/MathJax/mathJax.js"></script>
+    <script type="text/javascript" src="css/theme/js/MathJax/MathMenu.js"></script>
+    <script type="text/javascript" src="css/theme/js/MathJax/MathZoom.js"></script>
+    <script type="text/javascript" src="css/theme/bootstrap/js/jquery.tree.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/theme/bootstrap/css/jquery.tree.css">
+    <link rel="stylesheet" type="text/css" href="css/theme/bootstrap/css/jquery-ui.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+
+    <!--script type="text/javascript">
+     
+      function popup(url) 
+      {
+      params  = 'width='+screen.width;
+      params += ', height='+screen.height;
+      params += ', top=0, left=0'
+      params += ', fullscreen=yes';
+      
+      newwin=window.open(url,'windowname4', params);
+      if (window.focus) {newwin.focus()}
+      return false;
+      }
+     
+      </script-->
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+        
+        .skin-blue .treeview-menu>li.active>a,
+        .skin-blue .treeview-menu>li>a:hover {
+            color: #fff;
+            background: #f39c12;
+        }
+        
+        .logoSize {
+            width: 65px;
+            margin-left: 20px;
+        }
+        
+        #wrapper {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        
+
+
+        .options input[type=radio]:checked+label {
+	background: #30A5FF;
+	color: #FFF;
+	outline: 0;
+}
+
+.options input[type=radio]+label, .options input[type=checkbox]+label {
+	display: inline-block;
+	margin: -1px;
+	padding: 6px 12px;
+	margin-bottom: 0% !important;
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: none;
+	width: 100%;
+	border: #30a5ff 1px solid;
+}
+
+.text-blank-t-m {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.options input[type=radio], .options input[type=checkbox] {
+	display: none !important;
+}
+    </style>
+
+
+</head>
+
+<!-- apply our angular app to our site -->
+
+<body class="skin-blue sidebar-mini sidebar-collapse" oncontextmenu="return false">
+
+
+    <!-- <div id="wrapper" ng-hide="{{hideview}}">
+
+        <div ng-include="'header.html'"></div>
+        <div ng-include="'sidebar.html'"></div>
+        <!-- MAIN CONTENT -->
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
+
+</body>
+
+</html>

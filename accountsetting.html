@@ -1,0 +1,215 @@
+<div ng-include="'header.html'"></div>
+<div ng-include="'sidebar.html'"></div>
+<div class="content-wrapper" id="content">
+    <section class="content">
+        <div class="container-fluid" id="page-body">
+
+            <meta name="layout" content="main" />
+
+            <div class="row">
+
+                <div class="box">
+                    <div class="box-header">
+                        <h4>Profile Settings</h4>
+                        <hr />
+                    </div>
+                    <div class="box-body">
+                        <div class="container-fluid mt-20">
+                            <div class="row">
+
+                                <center>
+                                    <div class="dib">Subscription Plan
+
+                                        <span class="label bg-success" style="font-size: 12px; margin-left: 5px;">PREMIUM_6</span>
+
+                                    </div>
+                                    <div class="dib ml-20 pl_20 bl">Subscription Expires on
+                                        <span class="label label-danger">
+                                            07-08-2018</span>
+                                    </div>
+                                </center>
+
+
+                                <div class="col-sm-8 col-sm-offset-2 mt-20">
+                                    <div class="panel with-nav-tabs panel-primary">
+                                        <div class="panel-heading">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active">
+                                                    <a href="" data-toggle="tab">Edit Settings</a>
+                                                </li>
+                                                <li>
+                                                    <a ui-sref="" data-toggle="tab">Change Password</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="tab-content">
+
+                                                <div class="tab-pane fade in active" id="tab1primary">
+                                                    <div class="col-sm-6 col-sm-offset-3">
+                                                        <form action="/dashboard?id=userform" method="post" class="form-horizontal">
+                                                            <input type="hidden" name="testperfo" value="" id="testperfo" />
+                                                            <input type="hidden" name="profile" value="" id="profile" />
+                                                            <input type="hidden" name="url" value="" id="url" />
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label>Name:</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" placeholder="First Name" id="first_name" value="" name="firstName" data-type="alpha"
+                                                                                data-trigger="change" data-required="true" maxlength="50"
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                                    <div class="form-group">
+                                                                        <label for="input-id-1">Email:</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" id="input-id-1" disabled="disabled" value="revanth@texasreview.in">
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                                                                    <div class="form-group">
+                                                                        <label>Test Date:</label>
+                                                                        <div>
+                                                                            <input type="text" class="datepicker-input border form-control" name="testDate" id="testdate" value="2018-02-15" data-trigger="change"
+                                                                                data-type="dateIso" data-date-format="yyyy-mm-dd"
+                                                                                data-required="true">
+                                                                        </div>
+                                                                        <span id='dat' style="color: red;"></span>
+                                                                    </div>
+
+                                                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+
+                                                                    <div class="form-group">
+                                                                        <label>Previous Math Score:</label>
+                                                                        <div>
+                                                                            <input type="number" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="Math Target Score"
+                                                                                value="170" min="140" max="170" name="targetMathScore">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+
+                                                                    <div class="form-group">
+                                                                        <label>Previous Verbal Score:</label>
+                                                                        <div>
+                                                                            <input type="number" class="form-control" data-trigger="change" data-required="true" data-type="number" placeholder="Verbal Target Score"
+                                                                                min="140" max="170" value="170" name="targetVerablScore">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+
+                                                                    <div class="form-group">
+                                                                        <label>Target Score:</label>
+                                                                        <div>
+                                                                            <input type="number" class="form-control" data-trigger="change" data-required="true" value="320" data-type="number" placeholder="Actual Score"
+                                                                                min="260" max="340" name="previouScore">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+
+                                                                    <div class="form-group">
+                                                                        <label>Phone Number:</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="phone" maxlength="10" placeholder="Phone No"
+                                                                                value="9848086230" name="mobile" id="contact"
+                                                                                data-minlength="10" data-maxlength="10">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="line line-dashed b-b line-lg pull-in"></div>
+
+                                                                    <div class="form-group">
+                                                                        <label>City</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" placeholder="City/Town" name="city" id="state" value="hyd" data-type="alpha" data-required="true">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="picBox col-md-offset-3">
+                                                                        <div class="pic" id="pic">
+
+                                                                            <img src="css/theme/images/a0.png" alt="User Image" />
+
+                                                                        </div>
+                                                                        <!-- The global progress bar -->
+                                                                        <div id="progress" class="progress" style="display: none">
+                                                                            <div class="progress-bar progress-bar-success"></div>
+                                                                        </div>
+                                                                        <div class="alert" style="display: none"></div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <div class="form-group">
+                                                                        <label class="col-lg-3 control-label"></label>
+                                                                        <span style="margin-left: 25px;" class="btn btn-primary  fileinput-button">
+                                                                            <i class="fa fa-upload"></i>
+                                                                            <span>Upload</span>
+                                                                            <input id="fileupload" type="file" name="file">
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="col-sm-offset-2 col-sm-5">
+                                                                        <button type="button" class="btn btn-success" id="updateinfo">Update</button>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="useralert text-center" style="display: none"></div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="tab2primary">
+                                                    <div class="col-sm-6 col-sm-offset-3">
+                                                        <form id="cpass" class="bs-example form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="">Current Password</label>
+                                                                <div class="">
+                                                                    <input type="password" class="form-control" placeholder="Current Password" name="curpassword" id="curpass" required="true">
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="form-group">
+                                                                <label class="">New Password</label>
+                                                                <div class="">
+                                                                    <input type="password" class="form-control" placeholder="New Password" name="password" id="regpass" required="true">
+                                                                    <span id="regpassError"></span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="">Confirm Password</label>
+                                                                <div class="">
+                                                                    <input type="password" class="form-control" placeholder="Confirm Password" name="cpassword" id="conformPassword" required="true">
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="form-group">
+                                                                <div class="">
+                                                                    <button type="button" class="btn btn-success" id="changepassword">Change Password</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chnagepassalert text-center" style="display: none"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

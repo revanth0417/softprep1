@@ -1,0 +1,113 @@
+
+
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                <table width="50%">
+                    <tr>
+                        <td>
+                            <datepicker date-format="yyyy-MM-dd" selector="form-control">
+                                <div class="input-group" style="padding:0px">
+                                    <input class="form-control" placeholder="From date" ng-model="fromDate" />
+                                    <span class="input-group-addon" style="cursor: pointer"><i class="fa fa-calendar text-navy"></i></span></div>
+                            </datepicker>
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <td>
+                                <datepicker date-format="yyyy-MM-dd" selector="form-control">
+                                    <div class="input-group" style="padding:0px">
+                                        <input class="form-control" placeholder="To date" ng-model="toDate" />
+                                        <span class="input-group-addon" style="cursor: pointer"><i class="fa fa-calendar text-navy"></i></span></div>
+                                </datepicker>
+                            </td>
+                            <td>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>
+                                <button type="button" ng-click="DateSelect()" class="btn btn-danger"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</button> 
+                            </td>   
+                    </tr>
+                </table>
+            </div>
+                <div class="ibox-title">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="orders/#tab_a" data-toggle="tab" ng-click="statusChange(10050)">All</a></li>
+                        <li><a href="orders/#tab_a" data-toggle="tab" ng-click="statusChange(1001)">New Order</a></li>
+                        <li><a href="orders/#tab_a" data-toggle="tab" ng-click="statusChange(1002)">Assigned</a></li>
+                        <li><a href="orders/#tab_a" data-toggle="tab" ng-click="statusChange(1003)">Completed</a></li>
+                        <li><a href="orders/#tab_a" data-toggle="tab" ng-click="statusChange(1006)">Delivered  </a></li>
+                        <li><a href="orders/#tab_a" data-toggle="tab" ng-click="statusChange(1005)">Dispatched</a></li>
+                        <li><a href="orders/#tab_a" data-toggle="tab" ng-click="statusChange(1004)">Cancelled</a></li>
+                    </ul>
+                    <!-- end of nav -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_a">
+                           <h1></h1>
+                            <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>S. No.</th>
+                                <!-- <th>Index</th> -->
+                                <th>Order Number</th>
+                                <th>Order id</th>
+                                <th> OrderDate  </th>
+                                <th>Appointment ID</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Executive</th>
+                                <th>Customer Name</th>
+                                <th>Customer Mobile</th>
+                                <th>Status</th>
+                                <th>Total Price</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                           <tr ng-repeat="orders in list | orderBy:'-index'">
+                                <td>{{droppage+$index+1}}</td>
+                               <!--   <td>{{orders.index}}</td> -->
+                                <td>{{orders.order_number}}</td>   
+                                <td>{{orders.id}}</td>
+                                <td>{{orders.order_date | date1}}</td>
+                                <td>{{orders.quotationid.id}}</td> 
+                                <td>{{orders.quotationid.appointment_date | date1}}</td> 
+                                <td>{{orders.executive.name}}</td>  
+                                <td>{{orders.customer_name}}</td>
+                                <td>{{orders.customerdata.mobileno}}</td>
+                                 <td>{{orders.status | OrderStatus}}</td>
+                                <td>{{orders.total_price | currency:"&#8377; "}}</td>
+                                <td>
+                                    <button type="button" ng-click="view(orders.id)" class="btn btn-primary btn-xs">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                             <div class="pager">
+ 
+                                    <ul class="paginate  clearfix float-right" >        
+  
+                                    <ul class="paginate  clearfix float-right" >
+                                             
+                                    <li class="navpage" ng-hide="droppage == 0"  ng-hide="droppage == 1"><a  ng-click="currentPage1('prev')">Prev</a></li>
+                                        
+                                    <li class="single"> Page {{droppage | currentpage1}} of {{pages}}</li>
+                                        
+                                    <li class="navpage"  ng-hide="droppage ==  nexthideli"><a  ng-click="currentPage1('next')">Next</a></li>
+ 
+                                    <li class="navpage">
+                                        <a>Pages: <select  tabindex="4" ng-model="droppage" ng-change="gotopage(droppage)" ng-options=" option.name as option.id  for option in page">         
+                                                 </select> 
+                                         </a>
+                                    </li>
+                                 </ul>
+                             </div>
+                        </div>                       
+                    </div>
+                <!-- tab content -->
+            </div>
+        </div>
+    </div>
+</div>

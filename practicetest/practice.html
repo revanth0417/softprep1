@@ -1,0 +1,1293 @@
+<div ng-include="'header.html'"></div>
+<div ng-include="'sidebar.html'"></div>
+
+<div class="content-wrapper" id="content">
+    <section class="content">
+        <div class="container-fluid" id="page-body">
+            <style>
+                .i-checks i {
+                    margin-left: -20px!important;
+
+                }
+
+                .ul-tree {
+                    margin-left: 20px !important;
+                    display: block
+                }
+            </style>
+
+
+
+
+
+            <meta name="layout" content="main" />
+
+            <div class="container-fluid" id="main-content">
+                <!--- Maths and verbal boxes block -->
+                <div class="row">
+                    <!-- Maths box in dashboard-->
+                    <div class="col-sm-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">Customize Test</h3>
+                            </div>
+                            <div class="box-body mobile-view-content" style="min-height: 587px;">
+                                <center>
+                                    <label class="radio-inline i-checks">
+                                        <input type="radio" name="sectionType" value="QUANTITATIVE">
+                                        <i class="hide-for-label"></i>Math
+                                        <span class="d-b-in badge bg-danger l-s-p-c">22%</span>
+                                    </label>
+                                    <label class="radio-inline i-checks">
+                                        <input type="radio" name="sectionType" value="VERBAL">
+                                        <i class="hide-for-label"></i>Verbal
+                                        <span class="d-b-in badge bg-danger l-s-p-c">0%</span>
+                                    </label>
+                                </center>
+                                <hr class="mh" />
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h4>Select Question Type</h4>
+                                       ur resul is {{count}}
+                                        <div class="col-sm-10 categories">
+                                            <div class="sectionType QUANTITATIVE">
+                                               
+
+                                                <div class="mainParent" id="parent-4">
+                                                    <div class="checkbox i-checks" id="example-0">
+                                                        <div class="tree_v">
+                                                            <ul>
+                                                                <li>
+                                                                    <label ng-init="count=30">
+                                                                        <input type="checkbox"  class="parent"  ng-model="count"/>
+                                                                        <i></i>Quantitative Comparision</label>
+                                                                    <span class="d-b-in  badge bg-danger l-s-p-c">17%</span>
+
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainParent" id="parent-5">
+                                                    <div class="checkbox i-checks" id="example-0">
+                                                        <div class="tree_v">
+                                                            <ul>
+                                                                <li>
+                                                                    <label>
+                                                                        <input type="checkbox" data-id="5" class="parent" id="parent-input-5" data-value="9, 10, 11, 12" />
+                                                                        <i></i>Data Interpretation</label>
+                                                                    <span class="d-b-in  badge bg-danger l-s-p-c">31%</span>
+
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainParent" id="parent-6">
+                                                    <div class="checkbox i-checks" id="example-0">
+                                                        <div class="tree_v">
+                                                            <ul>
+                                                                <li>
+                                                                    <label>
+                                                                        <input type="checkbox" data-id="6" class="parent" id="parent-input-6" data-value="13, 14, 15, 16" />
+                                                                        <i></i>Problem Solving</label>
+                                                                    <span class="d-b-in  badge bg-danger l-s-p-c">17%</span>
+
+
+
+                                                                    <ul>
+                                                                        <div class="checkbox i-checks">
+                                                                            <li class="ul-tree">
+                                                                                <label>
+                                                                                    <input type="checkbox" class="child-input-6" data-value="13" />
+                                                                                    <i></i>Single Answer</label>
+                                                                                <span class="d-b-in  badge bg-danger l-s-p-c">18%</span>
+                                                                        </div>
+
+
+                                                                        <ul>
+                                                                            <div class="checkbox i-checks">
+                                                                                <li class="ul-tree">
+                                                                                    <label>
+                                                                                        <input type="checkbox" class="child-input-6" data-value="14" />
+                                                                                        <i></i>Multiple Answer</label>
+                                                                                    <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                                            </div>
+
+
+                                                                            <ul>
+
+                                                                                <ul>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <div class="checkbox i-checks">
+                                                                                            <label>
+                                                                                                <input type="checkbox" class="child-input-6" data-value="16,15" />
+                                                                                                <i></i>Numeric Entry</label>
+                                                                                            <span class="d-b-in  badge bg-danger l-s-p-c">50%</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+
+                                                                                </li>
+                                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="sectionType VERBAL" style="display: none">
+
+                                                <div class="mainParent" id="parent-1">
+                                                    <div class="checkbox i-checks" id="example-2">
+                                                        <div class="tree_v">
+                                                            <ul>
+                                                                <li>
+
+                                                                    <label>
+                                                                        <input type="checkbox" data-value="1, 2, 3" data-name="Text Completion" data-id="1" class="parent" id="parent-input-1" />
+                                                                        <i></i>Text Completion
+                                                                    </label>
+
+                                                                    <span class="d-b-in  badge bg-danger l-s-p-c">
+                                                                        0%
+                                                                    </span>
+
+                                                                    <ul>
+
+                                                                        <div class="checkbox i-checks">
+                                                                            <li>
+                                                                                <label>
+                                                                                    <input type="checkbox" class="child-input-1" data-value="1" />
+                                                                                    <i></i>Single Blank
+                                                                                </label>
+
+                                                                                <span class="d-b-in badge bg-danger l-s-p-c">
+                                                                                    0%
+                                                                                </span>
+
+                                                                            </li>
+                                                                        </div>
+
+                                                                        <div class="checkbox i-checks">
+                                                                            <li>
+                                                                                <label>
+                                                                                    <input type="checkbox" class="child-input-1" data-value="2" />
+                                                                                    <i></i>Double Blank
+                                                                                </label>
+
+                                                                                <span class="d-b-in badge bg-danger l-s-p-c">
+                                                                                    0%
+                                                                                </span>
+
+                                                                            </li>
+                                                                        </div>
+
+                                                                        <div class="checkbox i-checks">
+                                                                            <li>
+                                                                                <label>
+                                                                                    <input type="checkbox" class="child-input-1" data-value="3" />
+                                                                                    <i></i>Triple Blank
+                                                                                </label>
+
+                                                                                <span class="d-b-in badge bg-danger l-s-p-c">
+                                                                                    0%
+                                                                                </span>
+
+                                                                            </li>
+                                                                        </div>
+
+                                                                    </ul>
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainParent" id="parent-2">
+                                                    <div class="checkbox i-checks" id="example-2">
+                                                        <div class="tree_v">
+                                                            <ul>
+                                                                <li>
+
+                                                                    <li>
+                                                                        <label>
+                                                                            <input type="checkbox" data-value="7" data-name="Sentence Equivalence" data-id="2" class="parent" id="parent-input-2" />
+                                                                            <i></i>Sentence Equivalence</label>
+
+                                                                        <span class="d-b-in  badge bg-danger l-s-p-c">
+                                                                            0%
+                                                                        </span>
+
+                                                                    </li>
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainParent" id="parent-3">
+                                                    <div class="checkbox i-checks" id="example-2">
+                                                        <div class="tree_v">
+                                                            <ul>
+                                                                <li>
+
+
+                                                                    <label>
+                                                                        <input type="checkbox" data-name="Reading Comprehension" data-id="3" class="parentrc" id="parent-input-3" />
+                                                                        <i></i>
+                                                                        Reading Comprehension
+                                                                    </label>
+
+                                                                    <span class="d-b-in  badge bg-danger l-s-p-c">
+                                                                        0%
+                                                                    </span>
+
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div class="checkbox i-checks">
+                                                                                <label>
+                                                                                    <input type="checkbox" class="reading" data-reading="Short" />
+                                                                                    <i></i>Short</label>
+                                                                                <span class="d-b-in badge bg-danger l-s-p-c">0%</span>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox i-checks">
+                                                                                <label>
+                                                                                    <input type="checkbox" class="reading" data-reading="Long" />
+                                                                                    <i></i>Long</label>
+                                                                                <span class="d-b-in badge bg-danger l-s-p-c">0%</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainParent" id="parent-9">
+                                                    <div class="checkbox i-checks" id="example-2">
+                                                        <div class="tree_v">
+                                                            <ul>
+                                                                <li>
+
+                                                                    <li>
+                                                                        <label>
+                                                                            <input type="checkbox" data-value="17" data-name="Critical Reasoning" data-id="9" class="parent" id="parent-input-9" />
+                                                                            <i></i>Critical Reasoning</label>
+
+                                                                        <span class="d-b-in  badge bg-danger l-s-p-c">
+                                                                            0%
+                                                                        </span>
+
+                                                                    </li>
+
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end of col -->
+
+                                    <div class="col-sm-4 subLessons">
+                                        <div class="QUANTITATIVE">
+                                            <h4>Select Lessons</h4>
+                                            <div class="lessonType">
+
+                                                <div class="mainLessonParent" id="parent-lesson-1" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Number Systems" data-id="1" class="parentLesson" id="parent-lesson-input-1" />
+                                                            <i></i>Number Systems</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">11%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-1" data-value="12" />
+                                                                    <i></i>number line</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-1" data-value="13" />
+                                                                    <i></i>integers</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">33%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-1" data-value="14" />
+                                                                    <i></i>fractions</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-1" data-value="30" />
+                                                                    <i></i>Decimals</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">50%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-1" data-value="31" />
+                                                                    <i></i>Order of Arithmetic Operations:</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-2" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Integer Properties" data-id="2" class="parentLesson" id="parent-lesson-input-2" />
+                                                            <i></i>Integer Properties</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-2" data-value="2" />
+                                                                    <i></i>Even and odd properties</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-2" data-value="4" />
+                                                                    <i></i>Prime and Composite numbers</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-2" data-value="5" />
+                                                                    <i></i>Divisibility Rules</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-2" data-value="6" />
+                                                                    <i></i>Multiples and Factors</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-2" data-value="7" />
+                                                                    <i></i>HCF and LCM</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-3" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Percentages" data-id="3" class="parentLesson" id="parent-lesson-input-3" />
+                                                            <i></i>Percentages</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-3" data-value="8" />
+                                                                    <i></i>percent</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-3" data-value="9" />
+                                                                    <i></i>Profit and loss</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-3" data-value="10" />
+                                                                    <i></i>Simple interest and Compound interest</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-4" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Ratios and fractions" data-id="4" class="parentLesson" id="parent-lesson-input-4" />
+                                                            <i></i>Ratios and fractions</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-4" data-value="11" />
+                                                                    <i></i>EXPONENTS &amp; ROOTS</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-4" data-value="19" />
+                                                                    <i></i>RATIO &amp; PROPORTION</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-5" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Algebra" data-id="5" class="parentLesson" id="parent-lesson-input-5" />
+                                                            <i></i>Algebra</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-5" data-value="3" />
+                                                                    <i></i>LINEAR EQUATIONS</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-5" data-value="66" />
+                                                                    <i></i>VARIABLES AND ABSOLUTE VALUES</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-5" data-value="67" />
+                                                                    <i></i>Quadratic equations</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-5" data-value="68" />
+                                                                    <i></i>Inequalities-linear</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-5" data-value="69" />
+                                                                    <i></i>Inequalities-quadratic</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-5" data-value="70" />
+                                                                    <i></i>Functions, formulas and sequences</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-6" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Word problems" data-id="6" class="parentLesson" id="parent-lesson-input-6" />
+                                                            <i></i>Word problems</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">50%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="15" />
+                                                                    <i></i>constructing equations</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="16" />
+                                                                    <i></i>ages</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="17" />
+                                                                    <i></i>time and distance</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="21" />
+                                                                    <i></i>Time, Speed and Distance</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="22" />
+                                                                    <i></i>Conversions</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="23" />
+                                                                    <i></i>Relative Speed</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="24" />
+                                                                    <i></i>Trains Based Concept</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="25" />
+                                                                    <i></i>Circular Motion</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="26" />
+                                                                    <i></i>Average speeds</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="27" />
+                                                                    <i></i>TIME AND WORK</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">50%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="28" />
+                                                                    <i></i>Pipes And Cistern</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-6" data-value="29" />
+                                                                    <i></i>Boats And Streams:</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-7" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Angles and triangles" data-id="7" class="parentLesson" id="parent-lesson-input-7" />
+                                                            <i></i>Angles and triangles</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">20%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-7" data-value="32" />
+                                                                    <i></i>Triangles &ndash; Basic properties</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-7" data-value="33" />
+                                                                    <i></i>Straight lines</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-7" data-value="34" />
+                                                                    <i></i>Angles</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-7" data-value="35" />
+                                                                    <i></i>Polygons</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-7" data-value="36" />
+                                                                    <i></i>Types of Triangles</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">50%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-8" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Quadrilaterals and circles" data-id="8" class="parentLesson" id="parent-lesson-input-8"
+                                                            />
+                                                            <i></i>Quadrilaterals and circles</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">25%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-8" data-value="39" />
+                                                                    <i></i>Squares</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-8" data-value="54" />
+                                                                    <i></i>Rectangles</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">50%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-8" data-value="55" />
+                                                                    <i></i>circles</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-8" data-value="56" />
+                                                                    <i></i>parallelogram</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-8" data-value="103" />
+                                                                    <i></i>Rhombus</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-9" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="3D Geometry" data-id="9" class="parentLesson" id="parent-lesson-input-9" />
+                                                            <i></i>3D Geometry</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">20%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-9" data-value="61" />
+                                                                    <i></i>cube</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-9" data-value="62" />
+                                                                    <i></i>cubiod</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-9" data-value="63" />
+                                                                    <i></i>cylinder</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-9" data-value="64" />
+                                                                    <i></i>cone and sphere</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">50%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-10" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Coordinate geometry" data-id="10" class="parentLesson" id="parent-lesson-input-10" />
+                                                            <i></i>Coordinate geometry</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-10" data-value="53" />
+                                                                    <i></i>introduction</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-10" data-value="57" />
+                                                                    <i></i>LOCATION OF POINTS AND QUADRANTS</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-10" data-value="58" />
+                                                                    <i></i>BASIC PROPERTIES</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-10" data-value="59" />
+                                                                    <i></i>SLOPES AND INTERCEPT</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-10" data-value="60" />
+                                                                    <i></i>equations of a plane</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-11" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Statistics" data-id="11" class="parentLesson" id="parent-lesson-input-11" />
+                                                            <i></i>Statistics</label>
+                                                        <span class="d-b-in badge bg-success l-s-p-c">100%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-11" data-value="47" />
+                                                                    <i></i>Measures of central tendency (mean, median and mode)</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-11" data-value="48" />
+                                                                    <i></i>Measures of dispersion (Range, S.D.)</label>
+                                                                <span class="d-b-in badge bg-success l-s-p-c">100%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-12" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Data Interpretation" data-id="12" class="parentLesson" id="parent-lesson-input-12" />
+                                                            <i></i>Data Interpretation</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">31%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-12" data-value="40" />
+                                                                    <i></i>Line graph</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-12" data-value="41" />
+                                                                    <i></i>BarGraph</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">21%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-12" data-value="42" />
+                                                                    <i></i>Piechart</label>
+                                                                <span class="d-b-in badge bg-success l-s-p-c">100%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-12" data-value="43" />
+                                                                    <i></i>Histograph</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-12" data-value="44" />
+                                                                    <i></i>Boxplots</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-12" data-value="45" />
+                                                                    <i></i>Scatter plot</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-12" data-value="46" />
+                                                                    <i></i>Time plots</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-13" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Permutations and combinations" data-id="13" class="parentLesson" id="parent-lesson-input-13"
+                                                            />
+                                                            <i></i>Permutations and combinations</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-13" data-value="37" />
+                                                                    <i></i>Counting Principle</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-13" data-value="38" />
+                                                                    <i></i>Combinations</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="mainLessonParent" id="parent-lesson-14" style="margin-left :20px">
+                                                    <div class="checkbox i-checks">
+                                                        <label>
+                                                            <input type="checkbox" data-value="Probability" data-id="14" class="parentLesson" id="parent-lesson-input-14" />
+                                                            <i></i>Probability</label>
+                                                        <span class="d-b-in  badge bg-danger l-s-p-c">20%</span>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-14" data-value="49" />
+                                                                    <i></i>coins of dice problems</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">20%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-14" data-value="50" />
+                                                                    <i></i>balls of cards problem</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div style="display:none;">
+                                                            <div class="checkbox i-checks">
+                                                                <label>
+                                                                    <input type="checkbox" class="child-lesson-input-14" data-value="51" />
+                                                                    <i></i>miscelleneous problems</label>
+                                                                <span class="d-b-in  badge bg-danger l-s-p-c">0%</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="VERBAL lessonType">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="answerMode" id="example-1">
+                                            <div class="tree_v">
+                                                <ul>
+                                                    <div class="checkbox i-checks">
+                                                        <li>
+                                                            <label>
+                                                                <input type="checkbox" class="allQuestions" />
+                                                                <i></i>All Questions</label>
+                                                            <ul>
+                                                                <div class="answers">
+                                                                    <div class="checkbox i-checks">
+                                                                        <li>
+                                                                            <label>
+                                                                                <input type="checkbox" class="answered parent-answered" data-value="" />
+                                                                                <i></i>Answered
+                                                                            </label>
+                                                                            <ul>
+
+
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <div class="checkbox i-checks">
+                                                                                            <label>
+                                                                                                <input type="checkbox" class="child-answered" data-value="CORRECT" />
+                                                                                                <i></i>
+                                                                                                Correct
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+
+
+
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <div class="checkbox i-checks">
+                                                                                            <label>
+                                                                                                <input type="checkbox" class="child-answered" data-value="INCORRECT" />
+                                                                                                <i></i>
+                                                                                                Incorrect
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+
+
+
+                                                                    </div>
+                                                                    </ul>
+                                                                    </li>
+                                                                </div>
+                                                                <li>
+                                                                    <div class="checkbox i-checks">
+                                                                        <label>
+                                                                            <input type="checkbox" class="skipped" data-value="SKIPPED" />
+                                                                            <i></i>UnAnswered
+                                                                        </label>
+                                                                    </div>
+                                                                </li>
+
+
+
+                                                                <div class="flagMode">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div class="checkbox i-checks">
+                                                                                <label>
+                                                                                    <input type="checkbox" id="flag" class="flag" />
+                                                                                    <i></i>Flagged</label>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="checkbox i-checks">
+                                                                                <label>
+                                                                                    <input type="checkbox" id="guess" class="flag" />
+                                                                                    <i></i>Guessed</label>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </ul>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end of reuse mode col --->
+
+                                    <hr/>
+                                    <div class="row mt-40">
+                                        <div class="col-sm-4">
+                                            <h4>Select Difficulty</h4>
+                                            <div class="col-sm-10">
+                                                <label class="checkbox-inline i-checks" style="border-right: 1px dashed #ccc; padding-right: 10px;">
+                                                    <input type="checkbox" class="adaptive" data-value="Adaptive" />
+                                                    <i></i>Adaptive</label>
+
+                                                <label class="checkbox-inline i-checks">
+                                                    <input type="checkbox" class="difficultyLevel" data-value="EASY" />
+                                                    <i></i>Easy</label>
+
+                                                <label class="checkbox-inline i-checks">
+                                                    <input type="checkbox" class="difficultyLevel" data-value="MEDIUM" />
+                                                    <i></i>Medium</label>
+
+                                                <label class="checkbox-inline i-checks">
+                                                    <input type="checkbox" class="difficultyLevel" data-value="HARD" />
+                                                    <i></i>Hard</label>
+
+                                            </div>
+                                        </div>
+                                        <!-- end of Difficulty col--->
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <div class="col-sm-4">
+                                                    <label>Time Taken</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <select name="tTkn" class="form-control" id="tTkn">
+                                                        <option value="all">All</option>
+                                                        <option value="<1">&lt;1 Minute</option>
+                                                        <option value="1-2">1-2 Minutes</option>
+                                                        <option value=">3">&gt;3 Minutes</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--end of time taken form group-->
+                                            <br>
+                                            <br>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-4">
+                                                    <label>No Of Questions</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <select name="tQ" class="form-control" id="tQ">
+                                                        <option value="0">No Limit</option>
+                                                        <option value="5">5 Questions</option>
+                                                        <option value="10">10 Questions</option>
+                                                        <option value="15">15 Questions</option>
+                                                        <option value="20">20 Questions</option>
+                                                        <option value="25">25 Questions</option>
+                                                        <option value="30">30 Questions</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--end of No of questions form group-->
+                                            <br>
+                                            <br>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-4">
+                                                    <label>Time Mode</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <select name="tm" class="form-control" id="tm">
+                                                        <option value="00:00:00">No Limit</option>
+                                                        <option value="00:05:00">5 minutes</option>
+                                                        <option value="00:10:00">10 minutes</option>
+                                                        <option value="00:15:00">15 minutes</option>
+                                                        <option value="00:20:00">20 minutes</option>
+                                                        <option value="00:25:00">25 minutes</option>
+                                                        <option value="00:30:00">30 minutes</option>
+                                                        <option value="00:35:00">35 minutes</option>
+                                                        <option value="00:40:00">40 minutes</option>
+                                                        <option value="00:45:00">45 minutes</option>
+                                                        <option value="00:50:00">50 minutes</option>
+                                                        <option value="00:55:00">55 minutes</option>
+                                                        <option value="01:00:00">60 minutes</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--end of time taken form group-->
+
+                                        </div>
+                                        <!-- end of col-->
+                                    </div>
+                                </div>
+                                <!-- Hidden Fields for Lessons & Categories -->
+                                <input type="hidden" name="typeIds" value="" id="typeIds" />
+                                <input type="hidden" name="subLessonIds" value="" id="subLessonIds" />
+                                <input type="hidden" name="difficulties" value="" id="difficulties" />
+                                <input type="hidden" name="answerStatus" value="" id="answerStatus" />
+                                <input type="hidden" name="flagged" value="" id="flagged" />
+                                <input type="hidden" name="guessed" value="" id="guessed" />
+                                <input type="hidden" name="sType" value="" id="sType" />
+                                <input type="hidden" name="timeTaken" value="" id="timeTaken" />
+                                <input type="hidden" name="totalQuestions" value="" id="totalQuestions" />
+                                <input type="hidden" name="timeMode" value="" id="timeMode" />
+                                <input type="hidden" name="rcfields" value="" id="rcfields" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="some-footer">
+                    <style>
+                        /*.panel-footer {
+position:fixed;
+bottom:0;
+width:91%;
+padding: 15px 90px;
+
+}*/
+
+                        .some-footer {
+                            position: fixed;
+                            bottom: 0;
+                            padding: 15px 90px;
+                            width: 91%;
+                            margin-left: 16px;
+                            background: #fff;
+                            /* z-index: 9999;*/
+                        }
+                    </style>
+
+                    <div class="row">
+                        <form onsubmit="loading();jQuery.ajax({type:'POST',data:jQuery(this).serialize(), url:'/practice/save',success:function(data,textStatus){jQuery('#page-body').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){},complete:function(XMLHttpRequest,textStatus){onComplete()}});return false"
+                            method="post" action="/practice/save" class="bs-example form-horizontal" id="_practiceForm">
+                            <!-- Update the count -->
+                            <div id="count" class="col-sm-4">
+                                Your practice test will contain
+                                <span style="font-size: medium;" class="label label-warning"></span> questions.
+                                <div id="msgs">
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-4">
+                                <input type="text" name="name" class="form-control input-lg" required="required" placeholder="Enter Test Name" style="height: 45px;"
+                                    value="" id="name" />
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="submit" id="submit" class="btn btn-warning btn-lg" style="float:left;">Start Practice</button>
+                            </div>
+
+                        </form>
+                    </div>

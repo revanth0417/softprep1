@@ -1,0 +1,89 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element" dropdown>
+                    <a class="dropdown-toggle" dropdown-toggle href>
+                        <span class="clear">
+                                <span class="block m-t-xs">
+                                <img class="logo" src="assets/images/logo.png" alt="Logo" />    
+                             </span>
+                        <!-- <span class="text-muted text-xs block">Example menu<b class="caret"></b></span> -->
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    velocity
+                </div>
+            </li>
+            <!--<li ng-class="{active: $state.includes('city')}">
+                <a><i class="fa fa-map"></i> <span class="nav-label">City</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('city')}">
+                    <li ui-sref-active=""><a ui-sref="city">List</a></li>
+                    <li ui-sref-active="active"><a ui-sref="city.create">Create</a></li>
+                </ul>
+            </li>   -->
+            <li ng-class="{active: $state.includes('franchise')}">
+                <a><i class="fa fa-bicycle"></i> <span class="nav-label">Category</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('franchise')}">
+                    <li ui-sref-active=""><a ui-sref="category">List</a></li>
+                    <!--<li ui-sref-active="active"><a ui-sref="franchise.create">Create</a></li>-->
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('subcategory')}">
+                <a><i class="fa fa-bicycle"></i> <span class="nav-label">Sub category</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('subcategory')}">
+                    <li ui-sref-active=""><a ui-sref="subcategory">List</a></li>
+                    <!--<li ui-sref-active="active"><a ui-sref="franchise.create">Create</a></li>-->
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('franchise')}">
+                <a><i class="fa fa-bicycle"></i> <span class="nav-label">Products</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('products')}">
+                    <li ui-sref-active=""><a ui-sref="products">List</a></li>
+                    <!--<li ui-sref-active="active"><a ui-sref="franchise.create">Create</a></li>-->
+                </ul>
+            </li>
+
+
+            <li ng-class="{active: $state.includes('franchise')}">
+                <a><i class="fa fa-bicycle"></i> <span class="nav-label">Photo Gallery</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('photogallery')}">
+                    <li ui-sref-active=""><a ui-sref="photogallery">List</a></li>
+                    <!--<li ui-sref-active="active"><a ui-sref="franchise.create">Create</a></li>-->
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('franchise')}">
+                <a><i class="fa fa-bicycle"></i> <span class="nav-label">Vedio Gallery</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('vediogallery')}">
+                    <li ui-sref-active=""><a ui-sref="vediogallery">List</a></li>
+                    <!--<li ui-sref-active="active"><a ui-sref="franchise.create">Create</a></li>-->
+                </ul>
+            </li>
+            <li ng-class="{active: $state.includes('clients')}">
+                <a><i class="fa fa-bicycle"></i> <span class="nav-label">clients </span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('clients')}">
+                    <li ui-sref-active=""><a ui-sref="clients">List</a></li>
+                    <!--<li ui-sref-active="active"><a ui-sref="franchise.create">Create</a></li>-->
+                </ul>
+            </li>
+
+            <li ng-class="{active: $state.includes('banner')}">
+                <a><i class="fa fa-bicycle"></i> <span class="nav-label">Banner Images  </span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('banner')}">
+                    <li ui-sref-active=""><a ui-sref="banner">List</a></li>
+                    <!--<li ui-sref-active="active"><a ui-sref="franchise.create">Create</a></li>-->
+                </ul>
+            </li>
+
+
+
+        </ul>
+    </div>
+</nav>

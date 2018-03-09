@@ -1,0 +1,46 @@
+ 
+                      <header class="main-header">
+                        <!-- Logo -->
+                        <a ui-sref="home"> <center>
+                        <span class="logo-mini visible-xs"><img src="css/theme/bootstrap/img/gtsoft.png" class="img-responsive logo_img  logoSize"></span></center>
+                        </a>
+                        <a ui-sref="home"><span class="logo-lg hidden-xs"><img src="css/theme/bootstrap/img/gtsoft.png" class="img-responsive pull-left logo_img logoSize"></span></a>
+                        <nav class="navbar navbar-static-top" role="navigation">
+                          <!-- Sidebar toggle button-->
+                          <a ui-sref="home" class="sidebar-toggle visible-xs " data-toggle="offcanvas"
+                            role="button"><span class="sr-only">Toggle navigation</span>
+                          </a>
+                          
+                          <div class="navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                              <li class="dropdown user user-menu">
+                                      <a ui-sref="" class="dropdown-toggle" data-toggle="dropdown">
+                                      <i class="fa fa-user"></i> <span class="hidden-xs">{{login.username}}</span>
+                                      </a>
+                                      <ul class="dropdown-menu">
+                                        <!-- User image -->
+                                        <li class="user-header">
+                                
+                                <img src="css/theme/images/a0.png"
+                                  class="img-circle" alt="User Image" />
+                                
+                                          <p>
+                                            {{login.username}}
+                                          </p>
+                                        </li>
+                                        
+                                        <!-- Menu Footer-->
+                                        <li class="user-footer">
+                                          <div class="pull-left">
+                                          <a ui-sref="accountsetting"><button class="btn-warning btn-md">Account settings</button></a>
+                                          </div>
+                                          <div class="pull-right">
+                                            <a ui-sref="logout" ><button class="btn-success btn-md" ng-click="logout()">Logout</button></a>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </li>
+                            </ul>
+                          </div>
+                        </nav>
+                      </header>

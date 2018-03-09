@@ -1,0 +1,39 @@
+<div  class="log" style="height:700px !important;">
+	
+	<div style="margin-left:43% !important; margin-top:9% !important;" id="login">
+       <form action="/account/signup" method="post" name="signupForm"  id="signup" >
+       		
+            <p>
+	            <span class="fontawesome-user"></span>
+	            <input style="font-family: 'Open Sans', Arial, sans-serif; font-size: 14px; font-weight: 300; line-height: 1.5em;"type="text" class="text" name="email" value="" placeholder="Email"  onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required>
+	           
+            </p> 	
+            <p>
+	            <span class="fontawesome-lock"></span>
+	            <input style="font-family: 'Open Sans', Arial, sans-serif;font-size: 14px; font-weight: 300; line-height: 1.5em;" type="password" placeholder="Password" class="text"  name="password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required>
+	            
+            </p> 
+            <p>
+	            <span class="fontawesome-lock"></span>
+	            <input style="font-family: 'Open Sans', Arial, sans-serif; font-size: 14px; font-weight: 300; line-height: 1.5em;"type="password"  name="confirmPassword" placeholder="Confirm Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required>
+	            
+            </p> 
+            
+			<p class="dib">  
+                <div class="checkbox i-checks m-n" style="padding-top: -5px;padding-left: 0;margin-left: -6 %;margin-bottom: 17px;color: white;">
+				<label><input  type="checkbox" id="terms"><i></i>I agree to the Terms & Conditions</label>
+			  </div>
+			</p>
+            <p>
+		           	<input type="submit" value="Sign Up">
+		           	<input type="hidden" value="FREE" name="subType"/>
+			</br>
+			</p>
+        </form>       
+        <p>Already Have An Account?<br><br>
+        	 <a ui-sref="login" class="btn_outline" data-ng-disabled="signupForm.$invalid">Sign in <span class="fontawesome-arrow-right"></span></a>
+		</p>
+	  </div> <!-- end login -->
+	  
+    </div>
+

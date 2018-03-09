@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyClBk_IK6L8N1Qwi-KO91uHTs6D2X-tqYg",
+            authDomain: "softprg-6bd95.firebaseapp.com",
+            databaseURL: "https://softprg-6bd95.firebaseio.com",
+            projectId: "softprg-6bd95",
+            storageBucket: "",
+            messagingSenderId: "358961000741"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="circle.css">
+    <link rel="stylesheet" href="custom.css">
+    <script src="js/main.js"></script>
+
+    <script>
+    </script>
+    <style>
+
+    </style>
+
+</head>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="" ng-app="myApp" ng-controller="customersCtrl">
+    <div class="container">
+        <div class="panel panel-body">
+            <div style="text-align:right" class="row">
+                <div class="pagination">
+
+                    <!--{{currentPage}} == {{names.questions.length}}-->
+                    <ul ng-if="currentPage != names.questions.length">
+                        <li ng-class="prevPageDisabled()">
+                            <a ng-href ng-click="prevPage1()"><button class="btn btn-info btn-sm">Preveious</button></a>
+                        </li>
+                        <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                            <a href="#">{{n+1}}</a>
+                        </li>
+                        <li ng-class="nextPageDisabled()">
+                            <a ng-href ng-click="nextPage1()"><button class="btn btn-info btn-sm">Next</button> </a>
+                        </li>
+                    </ul>
+
+                    <ul ng-if="currentPage == names.questions.length">
+                        <li ng-class="nextPageDisabled()">
+                            <a ng-href="timer.html" target="_self"><button class="btn btn-success btn-sm">Finished</button> </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div><strong>Section {{names.quiz.Id}} of {{4}}.</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <h5><strong>Question {{currentPage}} of {{names.questions.length}}.</strong></h5>
+                    </div>
+                </div>
+                <div class="col-md-4 text-right">
+                    <span id="timer"></span> <button type="button" class="btn btn-primary btn-sm " ng-click="time()">ShowTime</button>
+                    <button type="button" class="btn btn-info btn-sm"><a style="color:white" href="nn.html">Calc</a></button><span id="demo1"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="button" class="btn btn-info btn-sm">QUICK TEST</button>
+                <button type="button" class="btn btn-info btn-sm">Exit Test</button>
+                <button type="button" class="btn btn-info btn-sm">Pause</button>
+                <button type="button" class="btn btn-info btn-sm">Mark<input type="checkbox"></button>
+                <button type="button" class="btn btn-info btn-sm">Review</button>
+                <button type="button" class="btn btn-info btn-sm">Help</button>
+            </div>
+        </div>
+    </div>
+    <form>
+        <div class="container">
+            <div ng-repeat="parent in names.questions">
+                <div ng-if="$index+1 == currentPage">
+                    <div class="row qust">
+                        <div class="col-md-9 ">
+                            <div style="overflow:auto;" class="form-group">
+                                <p><label style=" font-weight: 505 !important;">{{$index+1}}.{{parent.Name}}</label></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <!-- //If Question type 1  -->
+                            <div class="input-group" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 1">
+                                <p> <label class="circle">
+                                        <input type="radio" name="values['field_' + $parent.$parent.$index]" ng-model="values['field_' + $parent.$parent.$index]" value="{{child.Name}}" ng-checked="{{child.IsAnswer}}" ng-click="selectRadio($parent.$parent.$index,$index)" > 
+                                    <!-- <input type="radio" name="values['field_'+$parent.$parent.$index]" ng-checked="child.IsAnswer" ng-model="child.IsAnswer">   -->
+                                <span class="checkmark"></span> {{child.Name}} <!--{{child.IsAnswer}}-->
+                            </label>
+                                </p>
+                                <hr>
+                            </div>
+                            <!-- //If Question type2  -->
+                            <div class="input-group" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 2">
+                                <p> <label><input type="checkbox" ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                      {{child.Name}}
+                                </label>
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //If Question type3  -->
+                    <div class="row">
+                        <div class="col-md-4 options">
+                            <div class="input-group" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 3">
+                                <p> <label class="circle"><input type="radio"  class="radioD"  name="radioDouble" id="111-1"ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                            <span class="checkmark"></span>  {{child.Name}}
+                                           </label>
+                                </p>
+                                <hr>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4 options">
+                            <div class="input-group" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 3">
+                                <p> <label class="circle"><input type="radio"  class="radioD" name="radioDouble" ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                            <span class="checkmark"></span> {{child.Name}}
+                                          </label>
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- //If Question type4  -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 4">
+                                <p> <label class="circle"><input type="radio"   name="radiooptn1"ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                        <span class="checkmark"></span>  {{child.Name}}
+                                    </label>
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 4">
+                                <p> <label class="circle"><input type="radio"  name="radiooptn2" ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                        <span class="checkmark"></span>  {{child.Name}}
+                                    </label>
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 4">
+                                <p> <label class="circle"><input type="radio"   name="radiooptn3"ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                    <span class="checkmark"></span>  {{child.Name}}
+                                  </label>
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
+
+
+<!-- gform -->

@@ -1,0 +1,424 @@
+
+<div class="container" ng-controller="customersCtrl">
+    <div class="panel panel-body">
+        <div style="text-align:right" class="row">
+            <div class="pagination">
+
+                <!--{{currentPage}} == {{names.questions.length}}-->
+                <ul ng-if="currentPage != names.questions.length">
+                    <li ng-class="prevPageDisabled()">
+                        <a ng-href ng-click="prevPage1()"><button class="btn btn-info btn-sm">Preveious</button></a>
+                    </li>
+                    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                        <a href="#">{{n+1}}</a>
+                    </li>
+                    <li ng-class="nextPageDisabled()">
+                        <a ng-href ng-click="nextPage1()"><button class="btn btn-info btn-sm">Next</button> </a>
+                    </li>
+                </ul>
+
+                <ul ng-if="currentPage == names.questions.length">
+                    <li ng-class="nextPageDisabled()">
+                        <a ui-sref="timer"><button class="btn btn-primary btn-sm">Finished</button> </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <div><strong>Section {{names.quiz.Id}} of {{4}}.</strong>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h5><strong>Question {{currentPage}} of {{names.questions.length}}.</strong></h5>
+                </div>
+            </div>
+            <div class="col-md-4 text-right">
+                <!-- {{timeCount}} -->
+       <span id="timer"></span> <button  class="btn btn-info btn-sm" ng-click="time()">ShowTime</button> 
+                
+                <!-- <a href="Javascript:void(0)" class="btn btn-primary btn-outline btn-sm " id="showCalc" style="margin: 0 10px;">
+                    <i class="fa fa-calculator"></i> Calculator
+        </a> -->
+        <a href="Javascript:void(0)" >   <button type="button" class="btn btn-info btn-outline btn-sm "  id="showCalc" style="margin: 0 10px;  color: white !important;">  <i class="fa fa-calculator"></i> Calculator</button></a> 
+            </div>
+        </div>
+
+        <div class="row">
+            <button type="button" class="btn btn-info btn-sm">QUICK TEST</button>
+            <button type="button" class="btn btn-info btn-sm">Exit Test</button>
+            <button type="button" class="btn btn-info btn-sm">Pause</button>
+            <button type="button" class="btn btn-info btn-sm">Mark<input type="checkbox"></button>
+            <button type="button" class="btn btn-info btn-sm">Review</button>
+            <button type="button" class="btn btn-info btn-sm">Help</button>
+        </div>
+    </div>
+    <form>
+        <div class="container">
+            <div ng-repeat="parent in names.questions">
+                <div ng-if="$index+1 == currentPage">
+                    <div class="row qust">
+                        <div class="col-md-7 ">
+                            <div style="overflow:auto;" class="form-group">
+                                <p><label>{{$index+1}}.{{parent.Name}}</label></p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 ">
+                            <!-- //If Question type 1  -->
+                            <div class="input-group pract radio i-checks" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 1">
+                                <label><input type="radio"  class="radioD"  name="radioDouble" id="111-1"ng-checked="child.isChecked=='true'" ng-model="child.isChecked">
+                                        <!--input type="radio" name="values['field_' + $parent.$parent.$index]" ng-model="values['field_' + $parent.$parent.$index]" value="{{child.Name}}" ng-checked="{{child.IsAnswer}}" ng-click="selectRadio($parent.$parent.$index,$index)" -->                                     <!-- <input type="radio" name="values['field_'+$parent.$parent.$index]" ng-checked="child.IsAnswer" ng-model="child.IsAnswer">   -->
+                                <i ></i> <p >{{child.Name}} </p><!--{{child.IsAnswer}}-->
+                            </label>
+    
+                           
+                            </div>
+                            <!-- //If Question type2  -->
+                            <div class="input-group pract radio i-checks" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 2">
+                                <label><input type="checkbox" ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                    <i ></i> <p >{{child.Name}} </p>   
+                                </label>
+    
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //If Question type3  -->
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="input-group pract radio i-checks" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 3">
+                                <label><input type="radio"  class="radioD"  name="radioDouble" id="111-1"ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                    <i ></i> <p >{{child.Name}} </p>
+                                           </label>
+    
+                                <hr>
+                            </div>
+    
+                        </div>
+    
+                        <div class="col-md-4 ">
+                            <div class="input-group pract radio i-checks" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 3">
+                                <label><input type="radio"  class="radioD" name="radioDouble" ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                    <i ></i> <p >{{child.Name}} </p>
+                                          </label>
+    
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- //If Question type4  -->
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="input-group pract radio i-checks" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 4">
+                                <label><input type="radio" class=radioD1  name="radiooptn1"ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                    <i ></i> <p >{{child.Name}} </p>
+                                    </label>
+    
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group pract radio i-checks" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 4">
+                                <label><input type="radio"   class=radioD2  name="radiooptn2" ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                    <i ></i> <p >{{child.Name}} </p>
+                                    </label>
+    
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group pract radio i-checks" ng-repeat="child in parent.Options" ng-if="parent.QuestionTypeId == 4">
+                                <label class="circle"><input type="radio" class=radioD3   name="radiooptn3"ng-checked="child.isChecked=='true'" ng-model="child.isChecked">  
+                                    <i ></i> <p >{{child.Name}} </p>
+                                  </label>
+    
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+   
+    
+ 
+     
+                  
+                        
+
+         <div id="main" class="draggable ui-widget-content" style="position: absolute; z-index: 1;right:6px; top: 171px; display: none;">
+         <header class=" bg-primary text-center font-bold" style="background-color:#30A5FF !important">Calculator</header>
+         <input id="Result" name="Result" class="input form-control" readonly="readonly" style="background-color: #fff">
+         <div id="keys" style="position: absolute;">
+             <div id="FirstRow" style="height:34px !important">
+                 <div style="width: 100%;">
+                     <div class="btn-group btn-group-justified">
+                         <button id="ClearAll" type="reset" value="CE" class="clean btn btn-primary ce">CE</button>
+                         <button id="Clear" type="reset" value="C" class="clean btn btn-primary ce">C</button>
+                         <button id="transfer" type="button" value="transfer" class="transferclass btn btn-info trans">Use</button>
+                     </div>
+                 </div>
+             </div>
+     
+             <div id="SecondRow" style="height:34px !important">
+                 <div style="width: 100%;">
+                     <div class="btn-group btn-group-justified">
+                         <button style="float:left !important; border-radius: 0;" id="One" type="button" value="1" class="Show btn btn-primary butns">1</button>
+                         <button style="float:left !important; border-radius: 0;" id="Two" type="button" value="2" class="Show btn btn-primary butns">2</button>
+                         <button style="float:left !important; border-radius: 0;" id="Three" type="button" value="3" class="Show btn btn-primary butns">3</button>
+                         <button style="float:left !important; border-radius: 0;" id="Sub" type="button" value="-" class="operators operand btn btn-primary butnss">-</button>
+                     </div>
+                 </div>
+             </div>
+     
+             <div id="ThirdRow" style="height:34px !important">
+                 <div style="width: 100%;">
+                     <div class="btn-group btn-group-justified">
+                         <button style="float:left !important; border-radius: 0;" id="Four" type="button" value="4" class="Show btn btn-primary butns">4</button>
+                         <button style="float:left !important; border-radius: 0;" id="Five" type="button" value="5" class="Show btn btn-primary butns">5</button>
+                         <button style="float:left !important; border-radius: 0;" id="six" type="button" value="6" class="Show btn btn-primary butns">6</button>
+                         <button style="float:left !important; border-radius: 0;" id="Mul" type="button" value="*" class="operators operand btn btn-primary butnss">*</button>
+                     </div>
+                 </div>
+             </div>
+     
+             <div id="FourthRow" style="height:34px !important">
+                 <div style="width: 100%;">
+                     <div class="btn-group btn-group-justified">
+                         <button style="float:left !important; border-radius: 0;" id="Seven" type="button" value="7" class="Show btn btn-primary lter butns">7</button>
+                         <button style="float:left !important; border-radius: 0;" id="Eight" type="button" value="8" class="Show btn btn-primary butns">8</button>
+                         <button style="float:left !important; border-radius: 0;" id="Nine" type="button" value="9" class="Show btn btn-primary butns">9</button>
+                         <button style="float:left !important; border-radius: 0;" id="Divide" type="button" value="/" class="operators operand btn btn-primary butnss">/</button>
+                     </div>
+                 </div>
+             </div>
+     
+             <div id="FifthRow" style="height:34px !important">
+                 <div style="width: 100%;">
+                     <div class="btn-group btn-group-justified">
+                         <button style="float:left !important; border-radius: 0;" id="Zero" type="button" value="0" class="Show btn btn-primary butns">0</button>
+                         <button style="float:left !important; border-radius: 0;" id="Dot" type="button" value="." class="Show btn btn-primary butns">.</button>
+                         <button style="float:left !important; border-radius: 0;" id="Add" type="button" value="+" class="operators operand btn btn-primary butns">+</button>
+                         <button style="float:left !important; border-radius: 0;" id="Calculate" type="button" value="=" class="operand btn btn-primary butnss">=</button>
+                     </div>
+                 </div>
+             </div>
+     
+             <div id="SixthRow" style="height:34px !important;">
+                 <div style="width: 100%;">
+                     <div class="btn-group btn-group-justified">
+                         <button id="closeBtn" type="button" class="clean btn btn-primary butns" style="min-width: 158px">Close</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+     <script>
+     
+     /* Calcy Script Code Start */
+         
+         $('#main').hide();
+         $('#showCalc,#closeBtn').click(function(e) {
+             $('#main').toggle();
+         });
+         
+         var key = null;
+     
+         $('#transfer').click(function(){  
+     
+             var currentindex = $('#currentStep').val();
+              
+             var textLength = $("#wizard-p-"+currentindex+"").find("input[type=text]").length;
+     
+              
+          if(textLength==1)
+              {
+              $('.ctext').val($('#Result').val());
+              $('.ctext').focus();
+              }
+     
+          if(textLength==0)
+          {
+              $('.ctext').val($('#Result').val());
+           if( $('.text1').val()=='')
+               {
+               $('.text1').val($('#Result').val());
+               $('.text1').focus();
+               }
+           else if($('.text2').val()=='')
+               {
+               $('.text2').val($('#Result').val());
+               $('.text2').focus();
+               }
+          } 
+          if(textLength==2)
+              {
+              
+               if( $('.text1').val()=='')
+                   {
+                   $('.text1').val($('#Result').val());
+                   $('.text1').focus();
+                   }
+               else if($('.text2').val()=='')
+                   {
+                   $('.text2').val($('#Result').val());
+                   $('.text2').focus();
+                   }
+              } 
+         });  
+         $(function(){
+          $('#flagStatus').on('click', function(event){
+                 $('#flagStatus').toggleClass('active');
+           });
+          
+     
+             });
+         $(".clean").click(function () {
+            // $('.input').val("");
+              $('#Result').val("");
+     
+         });
+     
+         $(".Show").click(function () {
+             var EText = $('#Result').val();
+             if (EText != "0") {
+                 var val1 = EText;
+                 var ButtonVal = $(this);
+                 var val2 = ButtonVal.text();
+                 var Res = val1 + val2;
+                 $('#Result').val(Res);
+             } else {
+                 $('#Result').val();
+             }
+         });
+         $(function (e) {
+             var interRes = null;
+             var operator;
+             $('.operators').click(function (e) {
+                 var value1 = $('#Result').val();
+                 if (interRes != null) {
+                     var result = ApplyOperation(interRes, value1, operator);
+                     interRes = result;
+                 } else {
+                     interRes = value1;
+                 }
+                 operator = $(this).text();
+                 //$('input').val("");
+                 $('#Result').val("");
+             });
+             $('#Result').keypress(function (e) {
+                 if ((e.keyCode == 61)) {
+                     var op = operator;
+                     var res;
+                     var value2 = $('#Result').val();
+                     if ((value2 != "")) {
+                         var data = value2.split("+");
+                         if (data.length > 2) res = ApplyOperation(interRes, data[data.length - 1], op);
+                         else res = ApplyOperation(interRes, data[1], op);
+                     } else {
+                         res = interRes;
+                     }
+                     $('#Result').val(res);
+                     interRes = null;
+                 } else if ((e.keyCode == 43) || (e.keyCode == 45) || (e.keyCode == 42) || (e.keyCode == 47)) {
+                     var value1 = $('#Result').val();
+                     var inter = (interRes != null);
+                     if (inter) {
+                         var op = operator;
+                         var data = value1.split("+");
+                         if (data.length > 2) {
+                             operator = String.fromCharCode(e.keyCode);
+                             result = ApplyOperation(interRes, data[data.length - 1], op);
+                             interRes = result;
+                         } else {
+                             operator = String.fromCharCode(e.keyCode);
+                             result = ApplyOperation(interRes, data[1], op);
+                             interRes = result;
+                         }
+                     } else {
+                         interRes = value1;
+                     }
+                     operator = String.fromCharCode(e.keyCode);
+                     //  $('.input').text("");
+                     $('#Result').text("");
+                 }
+             });
+             $('#Calculate').click(function (e) {
+                 var op = operator;
+                 var res;
+                 var value2 = $('#Result').val();
+                 if ((value2 != "")) {
+                     res = ApplyOperation(interRes, value2, op);
+                 } else {
+                     res = interRes;
+                 }
+                 $('#Result').val(res);
+                 interRes = null;
+             });
+         });
+     
+         function ApplyOperation(value1, value2, operator) {
+             var res;
+             switch (operator) {
+                 case "+":
+                     res = addition(value1, value2);
+                     break;
+                 case "-":
+                     res = subtraction(value1, value2);
+                     break;
+                 case "*":
+                     res = multiplication(value1, value2);
+                     break;
+                 case "/":
+                     res = division(value1, value2);
+                     break;
+             }
+             return res;
+         }
+     
+         function addition(first, second) {
+             var a = parseFloat(first);
+             var b = parseFloat(second);
+             var total = a + b;
+             return total;
+         }
+     
+         function subtraction(first, second) {
+             var a = parseFloat(first);
+             var b = parseFloat(second);
+             var sub = a - b;
+     
+             return sub;
+         }
+     
+         function multiplication(first, second) {
+             var a = parseFloat(first);
+             var b = parseFloat(second);
+             var product = a * b;
+     
+             return product;
+         }
+     
+         function division(first, second) {
+             var a = parseFloat(first);
+             var b = parseFloat(second);
+             var divi = a / b;
+             return divi;
+         }
+     
+     </script>
+                         
+                     
+             
+             
+             
+     
+     </div>
+     </div>
+</div>

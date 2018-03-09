@@ -1,0 +1,30 @@
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <span minimaliza-sidebar></span>
+             
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <a ui-sref="logout"> 
+                    <i class="fa fa-sign-out"></i> Log out
+                </a>
+            </li>
+        </ul>
+    </nav>
+ 
+</div>
+<div class="row wrapper border-bottom white-bg page-heading" >
+<div class="col-lg-10">
+<h2>{{ $state.current.title }}</h2>
+
+</div>
+<div class="col-lg-2">
+<ol breadcrumbs class="breadcrumb">
+<li ng-repeat="breadcrumb in breadcrumbs">
+<a ui-sref="{{breadcrumb.stateName}}">{{breadcrumb.text}}</a>
+</li>
+</ol>
+</div>
+</div>
+ 

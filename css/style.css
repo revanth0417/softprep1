@@ -1,0 +1,44 @@
+
+
+      .pagination li {
+        display: inline-block;
+        padding: 5px;
+    }
+    .btn{
+       background:#30a5ff !important;
+    }
+    /*main div overflow*/
+    .qust {
+min-height: 200px;
+overflow-y: auto;
+max-height: 250px;
+}
+
+p{
+    font-weight: 550  !important;
+    font-size: 17px  !important;
+
+}
+label{
+    font-weight: 550  !important;
+
+}
+.btn-warning {
+    background-color: #f39c12 !important; 
+    border-color: #e08e0b !important; 
+      color: white !important;
+ }
+ 
+ /* login */
+ #login form span {
+    background-color: #30a5ff;
+    border-radius: 9px 0px 0px 9px;
+    color: #fff;
+    display: block;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    border: rgba(0,0,0,.075) 1px solid;
+}

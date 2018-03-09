@@ -1,0 +1,101 @@
+<div class="" style="margin-top: 10%;" ng-controller="loginCtrl">
+	
+        <div class="row">
+            <div class="col-sm-6">
+                <center>
+                    <img src="theme/images/icons/gt_soft_prep.png"
+                        class="img-responsive" />
+                    <div id="slider">
+                        <a href="#" class="control_next">>></a> <a href="#"
+                            class="control_prev"><<</a>
+                        <ul>
+                            <li>
+                                <img src="theme/images/icons/startup.png" width="80px" />
+                                <h2>RESPONSIVE UI</h2>
+                                <p>Awesome UI which gives you a privilige to access our app
+                                    from any device</p></li>
+                            <li>
+                                <img src="theme/images/icons/internet.png" width="80px" />
+                                <h2>TARGETED PRACTICE</h2>
+                                <p>Targeted Practice by customization. You can target and
+                                    practice particular area you are concerned by customizing
+                                    practise tests</p></li>
+                            <li>
+                                <img src="theme/images/icons/business.png" width="80px" />
+                                <h2>PERFORMANCE ANALYSIS</h2>
+                                <p>Track all your test performances with intuitive dashboard</p>
+                            </li>
+                            
+                            <li>
+                                <img src="theme/images/icons/multimedia.png" width="80px" />
+                                <h2>ANYTIME ANYWHERE</h2>
+                                <p>Can access your account from any where either in desktop or mobile</p></li>
+                            <li>
+                                <img src="theme/images/icons/game.png" width="80px" />
+                                <h2>REAL TEST SIMULATION</h2>
+                                <p>Simulate actual GRE test environment</p></li>
+                            <li>
+                                <img src="theme/images/icons/people.png" width="80px" />
+                                <h2>SMART REVIEW SYSTEM</h2>
+                                <p>Allows you to review your performance based on time,difficulty, subject</p></li>
+                        </ul>
+                        </div>
+                    <div class="slider_option"></div>
+                </center>
+            </div>
+            <!-- End of html -->
+            
+            <div class="col-lg-6">
+            
+                                
+                                <div id="login">
+                                <p><strong>Login </strong></p>
+                                <br>
+                                <form class="m-t" role="form" ng-submit="onSubmit()">
+                                    
+                                    <fieldset class="clearfix">
+                                        <p>
+                                            <span class="fontawesome-user"></span> <input type="text" ng-model="login.username" name="j_username" required placeholder="Username">
+                                        </p>
+                                        
+                                        <!-- JS because of IE support; better: placeholder="Username" -->
+                                        <p>
+                                            <span class="fontawesome-lock"></span> <input type="password" ng-model="login.password" name="j_password"  required placeholder="Password">
+                                        </p>
+                                        
+                                        <!-- JS because of IE support; better: placeholder="Password" -->
+                                        <div class="checkbox i-checks m-n">
+                                            <label class="text-white"><input type="checkbox" id="remember_me" ><i></i>Remember me</label>
+                                        </div>
+                                        <br>
+                                        <p>
+                                            <input type="submit" value="Sign In">
+                                            <span class="text-white ng-binding">{{errorLogin}}</span>
+                                        </p>
+                                    </fieldset>
+                                </form>
+                                <span style="color: rgb(173, 45, 45);"> 
+                                    
+                                </span>
+                                
+                
+                                    <a href="home/forgotPasswordIndex.html">
+                                             <p style=" padding-left: 70px;"> Forgot Password ?</p>
+                                    </a>
+                                    <p>
+                                        Don't Have An Account ?<br>
+                                        <br>
+                                        <a href="account/index.html" class="btn_outline btn btn-primary">Sign up <span
+                                                class="fontawesome-arrow-right"></span>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="text-center padder">
+            <p>
+                <small>2016 &copy; GT SOFTPREP PVT LTD. </small>
+            </p>
+        </div>
+                    </div>

@@ -1,0 +1,117 @@
+<div class="log" ng-controller="loginCtrl">
+    <div class="row">
+        <div class="col-md-6">
+            <center>
+                <img src="http://softprep.in/theme/images/icons/gt_soft_prep.png" class="img-responsive" style="position: relative;
+                top: 80px;"/ >
+                <div id="slider"   style=" position: relative; top: 50px;">
+                    <a href="#" class="control_next">>></a>
+                    <a href="#" class="control_prev">
+                        <<</a>
+                            <ul>
+                                <li>
+                                    <img src="http://softprep.in/theme/images/icons/startup.png" width="80px" />
+                                    <h2 style="color:#fff;">RESPONSIVE UI</h2>
+                                    <p style="color:#fff;">Awesome UI which gives you a privilige to access our app from any device</p>
+                                </li>
+                                <li>
+                                    <img src="http://softprep.in/theme/images/icons/internet.png" width="80px" />
+                                    <h2 style="color:#fff;">TARGETED PRACTICE</h2>
+                                    <p style="color:#fff;">Targeted Practice by customization. You can target and practice particular area you are
+                                        concerned by customizing practise tests</p>
+                                </li>
+                                <li>
+                                    <img src="http://softprep.in/theme/images/icons/business.png" width="80px" />
+                                    <h2 style="color:#fff;">PERFORMANCE ANALYSIS</h2>
+                                    <p style="color:#fff;">Track all your test performances with intuitive dashboard</p>
+                                </li>
+
+                                <li>
+                                    <img src="http://softprep.in/theme/images/icons/multimedia.png" width="80px" />
+                                    <h2 style="color:#fff;">ANYTIME ANYWHERE</h2>
+                                    <p style="color:#fff;">Can access your account from any where either in desktop or mobile</p>
+                                </li>
+                                <li>
+                                    <img src="http://softprep.in/theme/images/icons/game.png" width="80px" />
+                                    <h2 style="color:#fff;">REAL TEST SIMULATION</h2>
+                                    <p style="color:#fff;">Simulate actual GRE test environment</p>
+                                </li>
+                                <li>
+                                    <img src="http://softprep.in/theme/images/icons/people.png" width="80px" />
+                                    <h2>SMART REVIEW SYSTEM</h2>
+                                    <p>Allows you to review your performance based on time,difficulty, subject</p>
+                                </li>
+                            </ul>
+                </div>
+                <div class="slider_option"></div>
+            </center>
+        </div>
+        <!-- End of html -->
+
+        <div class="col-md-6">
+
+
+            <div style="position:relative; left:20px;"id="login">
+                <p>
+                    <strong>Login </strong>
+                </p>
+                <br>
+                <form class="m-t" role="form" ng-submit="onSubmit()">
+
+                    <fieldset class="clearfix">
+                        <p>
+                            <span class="fontawesome-user"></span>
+                            <input style=" font-family: 'Open Sans', Arial, sans-serif; font-size: 14px;font-weight: 300; line-height: 1.5em;"type="text" ng-model="login.username" name="j_username" required placeholder="Username">
+                        </p>
+
+                        <!-- JS because of IE support; better: placeholder="Username" -->
+                        <p>
+                            <span class="fontawesome-lock"></span>
+                            <input style=" font-family: 'Open Sans', Arial, sans-serif; font-size: 14px;font-weight: 300; line-height: 1.5em;"type="password" ng-model="login.password" name="j_password" required placeholder="Password">
+                        </p>
+
+                        <!-- JS because of IE support; better: placeholder="Password" -->
+                        <div class="checkbox i-checks m-n">
+                            <label class="text-white">
+                                <input type="checkbox" id="remember_me">
+                                <i></i>Remember me</label>
+                        </div>
+                        <br>
+                        <p>
+                            <h3 style="color:#fff !important">{{watingMsg}}</h3>
+                            <input type="submit" value="Sign In">
+                            <br/>
+                           
+                        </p>
+                    </fieldset>
+                </form>
+                <h3 style="color:#fff !important">{{errorLogin}}</h3>
+                <a href="home/forgotPasswordIndex.html">
+                    <p style=" padding-left: 70px;"> Forgot Password ?</p>
+                </a>
+                <p>
+                    Don't Have An Account ?
+                    <br>
+                    <br>
+                    <a ui-sref="signup" class="btn_outline btn btn-primary">Sign up
+                        <span class="fontawesome-arrow-right"></span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="text-center padder">
+        <p>
+            <small style="color:#fff;">2016 &copy; GT SOFTPREP PVT LTD. </small>
+        </p>
+    </div>	<div id="wait" style="display: none;">
+        <div class="sk-spinner sk-spinner-three-bounce">
+            <div class="sk-bounce1"></div>
+            <div class="sk-bounce2"></div>
+            <div class="sk-bounce3"></div>
+        </div>
+    </div>
+</div>
+</div>

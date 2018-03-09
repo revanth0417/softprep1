@@ -1,0 +1,162 @@
+/* a {
+    color: #eee;text-decoration: none;
+}
+    a:hover {
+        text-decoration: underline;
+    } */
+    .dib{
+         display:inline-block
+        }
+        input{
+            border: none;font-family: 'Open Sans', Arial, sans-serif;font-size: 14px;line-height: 1.5em;padding: 0;
+        }input[type="checkbox"]{
+            -webkit-appearance: !important;}p {line-height: 2.5em;
+            }
+            .clearfix {
+                *zoom: 1;
+            }
+            .clearfix:before, .clearfix:after {
+                content: ' ';display: table;
+            }
+            .clearfix:after {clear: both;}
+           
+            #login {
+                width: 280px;margin-left: 15%;
+            }
+            #login p{ 
+                color:#FFF;
+            }
+            #login form span {
+                background-color: #30a5ff;border-radius: 9px 0px 0px 9px;color: #fff;display: block;float: left;height: 50px;line-height: 50px;text-align: center;width: 50px;border:rgba(0,0,0,.075) 1px solid;}.mt-120{ margin-top:120px;}
+                #login form input .text {}#login form input[type="text"], input[type="password"] {
+                    background-color: #FFF;border-radius: 0px 9px 9px 0px;color: #30a5ff;margin-bottom: 1em;padding: 0 16px;width: 230px;box-shadow:none;outline:none;height: 50px;}#login form input[type="submit"] {border-radius: 9px;-moz-border-radius: 9px;-webkit-border-radius: 9px;background-color: transparent;color: #FFF;border:#FFF 1px solid;font-weight: bold;margin-bottom: 2em;text-transform: uppercase;width: 280px;cursor:pointer;height:50px;}#login form input[type="submit"]:hover {background-color: #FFF;color:#30a5ff;}#login > p {text-align: center;}#login > p span {padding-left: 5px;}#login .select{background-color: #FFF;border-radius: 0px 9px 9px 0px;color: #30a5ff;margin-bottom: 1em;padding: 0 16px;width: 230px;box-shadow: none;outline: none;height: 50px;}.btn_outline{border-radius: 9px;-moz-border-radius: 9px;-webkit-border-radius: 9px;background-color: transparent;color: #FFF;border:#FFF 1px solid;font-weight: bold;margin-bottom: 2em;text-transform: uppercase;width: 280px;cursor:pointer;padding:15px;}.btn_outline:hover {background-color: #FFF;color:#30a5ff;}#slider {position: relative;overflow: hidden;margin: 20px auto 0 auto;border-radius: 4px;margin-top: 80px;}#slider ul {position: relative;margin: 0;padding: 0px;height: 200px;list-style: none;}#slider ul li {position: relative;display: block;float: left;margin: 0;padding: 0px;width: 500px;height: 300px;text-align: center;line-height: 60px;}a.control_prev,a.control_next {position: absolute;z-index: 999;display: block;padding: 4% 3%;width: auto;height: auto;background: #337ab7;color: #fff;text-decoration: none;font-weight: 600;font-size: 18px;opacity: 0.8;cursor: pointer;}a.control_prev:hover,a.control_next:hover {opacity: 1;-webkit-transition: all 0.2s ease;}a.control_prev {border-radius: 0 2px 2px 0;}a.control_next {right: 0;border-radius: 2px 0 0 2px;}.slider_option {position: relative;margin: 10px auto;width: 160px;font-size: 18px;}.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: inherit;font-weight: 500;line-height: 1.1;color: #fff;}
+                    #login form input[type="text"], input[type="password"] {
+                        background-color: #FFF;
+                        border-radius: 0px 9px 9px 0px;
+                        color: #30a5ff;
+                        margin-bottom: 1em;
+                        padding: 0 16px;
+                        width: 230px;
+                        box-shadow: none;
+                        outline: none;
+                        height: 50px;
+                    }
+                    .log {background: url('top-slider.jpg') no-repeat center center fixed;color: #606468;font: 87.5%/1.5em 'Open Sans', sans-serif;margin: 0;overflow: scroll !important;-webkit-background-size: cover !important;-moz-background-size: cover;-o-background-size: cover !important;background-size: cover !important}
+                    .btn_outline {
+                        /* border-radius: 9px;
+                        -moz-border-radius: 9px;
+                        -webkit-border-radius: 9px;
+                        background-color: transparent !important;
+                        border-radius: 0px 9px 9px 0px !important;
+                        color: #FFF;
+                        border: #FFF 1px solid;
+                        font-weight: bold;
+                        margin-bottom: 2em;
+                        text-transform: uppercase;
+                        /* width: 280px; */
+                        /* cursor: pointer;
+                        padding: 15px; */ 
+                        border-radius: 9px !important;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    background-color: transparent;
+    color: #FFF;
+    border:#FFF 1px solid !important;
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    width: 280px;
+    cursor: pointer;
+    height: 50px;
+    background-color: transparent !important;
+                    }
+                    .btn_outline :hover{
+                        background-color:#ff00ff !important;
+                    }
+                   
+                    [class*="fontawesome-"]:before {
+                        font-family: 'FontAwesome', sans-serif;
+                    }
+                    
+                    .fontawesome-user:before {
+                        content: "\f007";
+                    }
+                    *:before, *:after {
+                        box-sizing: border-box;
+                    }
+                    [class*="fontawesome-"]:before {
+                        font-family: 'FontAwesome', sans-serif;
+                    }
+                    
+                    .fontawesome-lock:before {
+                        content: "\f023";
+                    }
+                    *:before, *:after {
+                        box-sizing: border-box;
+                    }
+
+                    /* slider */
+
+
+                    #slider {
+                        position: relative;
+                        overflow: hidden;
+                        margin: 20px auto 0 auto;
+                        border-radius: 4px;
+                        margin-top: 80px;
+                    }
+                    #slider ul { 
+                        position: relative;
+                        margin: 0;
+                        padding: 0px;
+                        height:200px;
+                        list-style: none;
+                    }
+                    #slider ul li {
+                        position: relative;
+                        display: block;
+                        float: left;
+                        margin: 0;
+                        padding: 0px;
+                        width: 500px;
+                        height: 300px;
+                        text-align: center;
+                        line-height: 60px;
+                    }
+                    a.control_prev,a.control_next {
+                        position: absolute;
+                        z-index: 999;
+                        display: block;
+                        padding: 4% 3%;
+                        width: auto;
+                        height: auto;
+                        background: #337ab7;
+                        color: #fff;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 18px;
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+                    a.control_prev:hover,a.control_next:hover {
+                        opacity: 1;
+                        -webkit-transition: all 0.2s ease;
+                    }
+                    a.control_prev {
+                        border-radius: 0 2px 2px 0;}
+                        a.control_next {
+                            right: 0;
+                            border-radius: 2px 0 0 2px;
+                        }
+                        .slider_option {
+                            position: relative;
+                            margin: 10px auto;
+                            width: 160px;
+                            font-size: 18px;
+                        }
+                        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+                            font-family: inherit;
+                            font-weight: 500;
+                            line-height: 1.1;
+                            color: #fff;
+                        }
